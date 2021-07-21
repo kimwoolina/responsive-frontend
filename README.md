@@ -1,5 +1,5 @@
 ## Functions
-- Ability to sort order
+- Ability to sort order by drag-and-drop
 - edit and delete the data in the table
 - Tab to display the data submissions 
 - The tab is changed into an accordion when the page is in 480px width. 
