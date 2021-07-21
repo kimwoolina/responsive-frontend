@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>xtopia</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- jQuery  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <!-- bootstrap JS -->
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  
+  <!-- bootstrap CSS -->
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--CSS-->
+  <link rel="stylesheet" type="text/css" href="./css/xtopia.css">
+</head>
+
+
+<body>
+  <!--Table-->
+  <div class="row"> <!--"container"-->
+    <table id="exTab" width="100%"class="table table-bordered table-hover text-center">
+      <thead>
+        <tr name="trAdd">
+            <th></th>
+            <th>Title</th>
+            <th>Content 1</th>
+            <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="row_drag">
+          <tr name="exTr" id="1" onclick="javascript:fn_trEvent(this)">
+            <td><img src="./resource/img/order.png" style="width:15px;"/></td>
+            <td id="tab" name="tab">Tab 1</td>
+            <td id="content" name="content">Content 1</td>
+            <td><btn class="btn" name="edit" type="submit"><img src="./resource/img/edit.png" style="width:20px;"/></btn><btn class="btn" id="delete" type="submit"><img src="./resource/img/delete.png" style="width:20px;"/></btn></td>
+          </tr>
+          <tr name="exTr" id="2" onclick="javascript:fn_trEvent(this)">
+              <td><img src="./resource/img/order.png" style="width:15px;"/></td>
+              <td id="tab" name="tab">Tab 2</td>
+              <td id="content" name="content">Content 2</td>
+              <td><btn class="btn" name="edit" type="submit"><img src="./resource/img/edit.png" style="width:20px;"/></btn><btn class="btn" id="delete" type="submit"><img src="./resource/img/delete.png" style="width:20px;"/></btn></td>
+            </tr>
+      </tbody>
+    </table>
+    <input type="hidden" id="trNum" name="trNum">
+  </div>
+
+  <p>
+  <!--Input-->
+    <table>
+      <tr>
+        <td>Title</td>
+        <td><input type=text id="exResult1" class="col-lg-12"></td>
+      </tr>
+
+      <tr>
+        <td>Content</td>
+        <td><textarea id="exResult2" class="col-lg-12"></textarea></td>
+      </tr>
+    </table>
+
+    <center>
+        <input type="button" id="addBtn" name="addBtn" value="Save As New">
+        <input type="button" id="editBtn" name="editBtn" onclick="edit_row()" value="Save">
+    </center>
+
+
+  <p>
+  <!--Tab-->
+
+  <div class="tabBox">
+    <ul id="tabs" class="tabs">
+      <li><a class="liTab" id="liTab1" href="#tab1" onclick="javascript:drawTab(1);">Tab 1</a></li>
+      <li><a class="liTab" id="liTab2" href="#tab2" onclick="javascript:drawTab(2);">Tab 2</a></li>
+    </ul>
+   
+    <div id="tabContainer" class="tabContainer">
+      <div id="tab1" class="tabContent">
+        Content 1
+      </div>
+       
+      <div id="tab2" class="tabContent">
+        Content 2
+      </div>
+       
+    </div>
+  </div> 
+
+  <!--JavaScript-->
+  <script type="text/javascript" src="./xtopia.js"></script>
+
+</body>
+</html>
