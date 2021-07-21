@@ -1,4 +1,4 @@
-## functions
+## Functions
 - Ability to sort order
 - edit and delete the data in the table
 - Tab to display the data submissions 
